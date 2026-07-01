@@ -1,10 +1,15 @@
-﻿using System;
+﻿using IntelligencePipeline.Models.Enums;
+using System;
 namespace IntelligencePipeline;
 
- class Program
- {
+
+
+class Program
+{
+    
+
     public static void Main()
     {
-        
+
     }
- }
+}
