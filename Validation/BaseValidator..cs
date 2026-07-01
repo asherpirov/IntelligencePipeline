@@ -8,7 +8,18 @@ abstract class BaseValidator : IValidator
 {
  
 
-    public abstract ValidationResult Validate(Report report);
+    public ValidationResult Validate(Report report)
+    {
+        ValidationResult result = ValidateCommonFields(report);
+
+        if (result.IsValid == false)
+        {
+            return result;
+        }
+        return ValidateSpecificFields(report);
+
+
+    }
     
     protected ValidationResult ValidateCommonFields(Report report)
     {
